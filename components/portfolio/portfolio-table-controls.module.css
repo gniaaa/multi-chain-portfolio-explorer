@@ -1,0 +1,40 @@
+.totalFooter {
+  background: #fafafa;
+  color: #111827;
+  font-weight: 750;
+}
+
+.totalFooter th,
+.totalFooter td {
+  border-top: 1px solid #dfe5ee;
+  border-bottom: 0;
+}
+
+.sortButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0;
+  border: 0;
+  color: inherit;
+  background: transparent;
+  cursor: pointer;
+  font: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+}
+
+.sortButton span {
+  color: #94a3b8;
+  font-size: 0.62rem;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.sortButton:focus-visible {
+  border-radius: 6px;
+  outline: 3px solid rgb(99 102 241 / 0.28);
+  outline-offset: 3px;
+}

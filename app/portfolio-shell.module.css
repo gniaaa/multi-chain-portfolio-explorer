@@ -1,0 +1,240 @@
+.pageShell {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 15% -10%, rgb(81 103 238 / 0.08), transparent 28rem),
+    #f5f6f8;
+}
+
+.topbar {
+  display: flex;
+  min-height: 76px;
+  padding: 0 5vw;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e3e7ee;
+  background: rgb(255 255 255 / 0.82);
+  backdrop-filter: blur(18px);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #121826;
+  text-decoration: none;
+}
+
+.brand > span:last-child {
+  display: grid;
+  gap: 0.05rem;
+}
+
+.brand strong {
+  font-size: 0.98rem;
+  letter-spacing: -0.02em;
+}
+
+.brand small {
+  color: #778195;
+  font-size: 0.7rem;
+}
+
+.brandMark {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3px;
+  padding: 5px;
+  border-radius: 11px;
+  background: #111827;
+  box-shadow: 0 5px 14px rgb(17 24 39 / 0.2);
+}
+
+.brandMark span {
+  border-radius: 3px;
+  background: #fff;
+}
+
+.brandMark span:first-child {
+  grid-row: span 2;
+  background: #a5b4fc;
+}
+
+.brandMark span:last-child {
+  background: #67e8f9;
+}
+
+.dataStatus,
+.scopeBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: #576176;
+  font-size: 0.74rem;
+  font-weight: 650;
+}
+
+.statusDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 0 4px rgb(34 197 94 / 0.12);
+}
+
+.content {
+  width: min(1180px, 90vw);
+  margin: 0 auto;
+  padding: 4rem 0 2.5rem;
+}
+
+.intro {
+  display: flex;
+  margin-bottom: 2rem;
+  align-items: end;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.intro h1 {
+  max-width: 780px;
+  margin: 0.4rem 0 0.75rem;
+  color: #101828;
+  font-size: clamp(2.25rem, 4.9vw, 4.6rem);
+  font-weight: 670;
+  letter-spacing: -0.062em;
+  line-height: 0.98;
+}
+
+.intro p:not(.kicker) {
+  max-width: 630px;
+  margin: 0;
+  color: #697386;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.kicker {
+  margin: 0;
+  color: #5965db;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.scopeBadge {
+  flex: 0 0 auto;
+  padding: 0.55rem 0.75rem;
+  border: 1px solid #dfe3eb;
+  border-radius: 999px;
+  background: #fff;
+}
+
+.content > :global(section),
+.content > :global(.portfolio_section) {
+  margin-bottom: 1rem;
+}
+
+.holdingsSection {
+  margin-top: 2.5rem;
+}
+
+.holdingsHeading {
+  display: flex;
+  margin-bottom: 0.9rem;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.holdingsHeading h2 {
+  margin: 0.22rem 0 0;
+  color: #111827;
+  font-size: 1.4rem;
+  letter-spacing: -0.025em;
+}
+
+.toolbar {
+  display: grid;
+  margin-bottom: 0.8rem;
+  grid-template-columns: minmax(260px, 1fr) auto;
+  align-items: center;
+  gap: 1rem;
+}
+
+.toolbar p {
+  margin: 0;
+  color: #818a9d;
+  font-size: 0.72rem;
+}
+
+.footer {
+  display: flex;
+  margin-top: 2.5rem;
+  padding-top: 1.25rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  border-top: 1px solid #dfe3ea;
+  color: #737d90;
+  font-size: 0.72rem;
+}
+
+.footer p {
+  max-width: 600px;
+  margin: 0;
+  line-height: 1.55;
+}
+
+.footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.8rem;
+}
+
+.footer a {
+  color: #4f5acb;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 760px) {
+  .topbar {
+    padding: 0 1rem;
+  }
+
+  .dataStatus {
+    display: none;
+  }
+
+  .content {
+    width: min(100% - 2rem, 1180px);
+    padding-top: 2.5rem;
+  }
+
+  .intro,
+  .holdingsHeading,
+  .footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .toolbar {
+    grid-template-columns: 1fr;
+  }
+
+  .toolbar p {
+    display: none;
+  }
+
+  .footer nav {
+    justify-content: flex-start;
+  }
+}

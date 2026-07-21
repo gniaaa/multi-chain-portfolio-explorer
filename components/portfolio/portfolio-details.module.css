@@ -1,0 +1,118 @@
+.expandButton {
+  display: flex;
+  width: 100%;
+  padding: 0;
+  align-items: flex-start;
+  gap: 0.65rem;
+  border: 0;
+  color: inherit;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+}
+
+.expandButton:focus-visible {
+  border-radius: 8px;
+  outline: 3px solid rgb(99 102 241 / 0.22);
+  outline-offset: 4px;
+}
+
+.chevron {
+  display: grid;
+  width: 1.35rem;
+  height: 1.35rem;
+  margin-top: 0.05rem;
+  flex: 0 0 auto;
+  border: 1px solid #dbe1ea;
+  border-radius: 6px;
+  place-items: center;
+  color: #4f46e5;
+  background: #f8fafc;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.compositionRow > td {
+  padding: 0 !important;
+  background: #f8fafc;
+}
+
+.compositionPanel {
+  padding: 0.95rem 1rem 1.15rem 3rem;
+  border-bottom: 1px solid #e5e9f0;
+}
+
+.compositionTitle {
+  margin: 0 0 0.65rem;
+  color: #64748b;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.compositionList {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.positionDetail {
+  display: grid;
+  padding: 0.7rem 0.8rem;
+  grid-template-columns: minmax(180px, 1.6fr) repeat(4, minmax(100px, 1fr));
+  gap: 0.8rem;
+  align-items: center;
+  border: 1px solid #e3e7ee;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.positionDetail > div {
+  display: grid;
+  min-width: 0;
+  gap: 0.16rem;
+}
+
+.positionDetail strong,
+.positionDetail span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.positionDetail strong {
+  color: #111827;
+  font-size: 0.78rem;
+}
+
+.positionDetail span {
+  color: #4b5565;
+  font-size: 0.72rem;
+}
+
+.positionDetail small {
+  color: #8a94a6;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+}
+
+.detailMono {
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+}
+
+@media (max-width: 820px) {
+  .positionDetail {
+    grid-template-columns: 1.4fr 1fr 1fr;
+  }
+
+  .positionDetail > div:nth-child(3),
+  .positionDetail > div:nth-child(5) {
+    display: none;
+  }
+
+  .compositionPanel {
+    padding-left: 1rem;
+  }
+}
